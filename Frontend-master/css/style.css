@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    background-color: #fff;
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    .login-signup-card {
+        padding: 40px;
+    }
+}

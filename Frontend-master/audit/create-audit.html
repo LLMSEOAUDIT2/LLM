@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Audit</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styleAudit.css">
+
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Create New Audit</h1>
+        <form>
+            <div class="row g-3">
+                <!-- Row 1 -->
+                <div class="col-md-6">
+                    <label for="clientName" class="form-label">Client Name</label>
+                    <input type="text" class="form-control" id="clientName">
+                </div>
+                <div class="col-md-6">
+                    <label for="websiteUrl" class="form-label">Website URL</label>
+                    <input type="url" class="form-control" id="websiteUrl">
+                </div>
+
+                <!-- Row 2 -->
+                <div class="col-md-6">
+                    <label for="auditDate" class="form-label">Audit Date</label>
+                    <input type="date" class="form-control" id="auditDate">
+                </div>
+                <div class="col-md-6">
+                    <label for="gtmetrixGrade" class="form-label">GTMetrix Grade</label>
+                    <input type="text" class="form-control" id="gtmetrixGrade">
+                </div>
+
+                <!-- Row 3 -->
+                <div class="col-md-6">
+                    <label for="gtmetrixPerformance" class="form-label">GTMetrix Performance</label>
+                    <input type="number" class="form-control" id="gtmetrixPerformance" value="0">
+                </div>
+                <div class="col-md-6">
+                    <label for="gtmetrixStructure" class="form-label">GTMetrix Structure</label>
+                    <input type="number" class="form-control" id="gtmetrixStructure" value="0">
+                </div>
+
+                <!-- Row 4 -->
+                <div class="col-md-6">
+                    <label for="pagespeedPerformance" class="form-label">PageSpeed Performance</label>
+                    <input type="number" class="form-control" id="pagespeedPerformance" value="0">
+                </div>
+                <div class="col-md-6">
+                    <label for="pagespeedAccessibility" class="form-label">PageSpeed Accessibility</label>
+                    <input type="number" class="form-control" id="pagespeedAccessibility" value="0">
+                </div>
+
+                <!-- Row 5 -->
+                <div class="col-md-6">
+                    <label for="pagespeedSeo" class="form-label">PageSpeed Best Practices</label>
+                    <input type="number" class="form-control" id="pagespeedbestpractices" value="0">
+                </div>
+                <div class="col-md-6">
+                    <label for="brokenLinksCount" class="form-label">PageSpeed SEO</label>
+                    <input type="number" class="form-control" id="pageSpeedSEO" value="0">
+                </div>
+
+
+                <!-- Content Analysis -->
+                <!-- Row 6 -->
+                <div class="col-md-6">
+                    <label for="brokenLinksUrl" class="form-label">Broken Links Count</label>
+                    <input type="number" class="form-control" id="brokenLinkcount" value="0">
+                </div>
+                <div class="col-md-6">
+                    <label for="commonContentPercentage" class="form-label">Broken Links URL</label>
+                    <input type="text" class="form-control" id="brokenLinkurl">
+                </div>
+
+                <!-- Row 7 -->
+                <div class="col-md-6">
+                    <label for="duplicateContentPercentage" class="form-label">Duplicate Content Percentage</label>
+                    <input type="number" class="form-control" id="duplicateContentPercentage" value="0">
+                </div>
+                <div class="col-md-6">
+                    <label for="uniqueContentPercentage" class="form-label">Common Content Percentage</label>
+                    <input type="number" class="form-control" id="commonContentPercentage" value="0">
+                </div>
+
+                <!-- Row 7 -->
+                <div class="col-md-6">
+                    <label for="duplicateContentPercentage" class="form-label">Unique Content Percentage</label>
+                    <input type="number" class="form-control" id="uniqueContentPercentage" value="0">
+                </div>
+                <div class="col-md-6">
+                    <div class="">
+                        <label for="faviconPresent" class="form-check-label">Mobile Friendly</label>
+                        <input type="checkbox" class="form-check-input" id="faviconPresent">
+                    </div>
+                </div>
+
+
+                <!-- Meta title -->
+                <!-- Row 8 -->
+                <div class="col-md-6">
+                    <label for="metaTitle" class="form-label">Meta Title</label>
+                    <input type="text" class="form-control" id="metaTitle">
+                </div>
+                <div class="col-md-6">
+                    <label for="metaTitleCount" class="form-label">Meta Title Count</label>
+                    <input type="number" class="form-control" id="metaTitleCount" value="0">
+                </div>
+
+                <!-- Row 9 -->
+                <div class="col-md-6">
+                    <label for="metaDescription" class="form-label">Meta Description</label>
+                    <textarea class="form-control" id="metaDescription"></textarea>
+                </div>
+                <div class="col-md-6">
+                    <label for="metaDescriptionCount" class="form-label">Meta Description Count</label>
+                    <input type="number" class="form-control" id="metaDescriptionCount" value="0">
+                </div>
+
+
+                <!-- Heading count -->
+                <!-- Row 3 -->
+                <div class="col-md-6">
+                    <label for="gtmetrixPerformance" class="form-label">H1 Count</label>
+                    <input type="number" class="form-control" id="h1Count" value="0">
+                </div>
+                <div class="col-md-6">
+                    <label for="gtmetrixStructure" class="form-label">H2 Count</label>
+                    <input type="number" class="form-control" id="h2Count" value="0">
+                </div>
+
+                <!-- Row 4 -->
+                <div class="col-md-6">
+                    <label for="pagespeedPerformance" class="form-label">H3 Count</label>
+                    <input type="number" class="form-control" id="H3 Count" value="0">
+                </div>
+                <div class="col-md-6">
+                    <label for="pagespeedAccessibility" class="form-label">H4 Count</label>
+                    <input type="number" class="form-control" id="H4 Count" value="0">
+                </div>
+
+                <!-- Row 5 -->
+                <div class="col-md-6">
+                    <label for="pagespeedSeo" class="form-label">H5 Count</label>
+                    <input type="number" class="form-control" id="h5Count" value="0">
+                </div>
+                <div class="col-md-6">
+                    <label for="brokenLinksCount" class="form-label">H6 Count</label>
+                    <input type="number" class="form-control" id="H6 Count" value="0">
+                </div>
+
+                <!-- row 6 -->
+                <div class="col-md-6">
+                    <label for="metaKeywords" class="form-label">Meta Keywords</label>
+                    <input type="text" class="form-control" id="metaKeywords">
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="openGraph" class="form-label">Open Graph Status</label>
+                    <select class="form-select" id="openGraph">
+                        <option value="not_implemented">Not Implemented</option>
+                        <option value="implemented">Implemented</option>
+                    </select>
+                </div>
+
+
+                <!-- SEO Technical Checkboxes -->
+                <div class="col-12">
+                    <h5>SEO Teknis</h5>
+                    <div class="form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="metaRobots">
+                        <label for="metaRobots" class="form-check-label">Meta Robots</label>
+                    </div>
+                    <div class="form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="canonicalTag">
+                        <label for="canonicalTag" class="form-check-label">Canonical Tag Present</label>
+                    </div>
+                    <div class="form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="sitemapPresent">
+                        <label for="sitemapPresent" class="form-check-label">Sitemap Present</label>
+                    </div>
+                    <div class="form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="robotsTxtPresent">
+                        <label for="robotsTxtPresent" class="form-check-label">Robots.txt Present</label>
+                    </div>
+                    <div class="form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="googleSearchConsole">
+                        <label for="googleSearchConsole" class="form-check-label">Google Search Console
+                            Connected</label>
+                    </div>
+                    <div class="form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="faviconPresent">
+                        <label for="faviconPresent" class="form-check-label">Favicon Present</label>
+                    </div>
+                </div>
+
+
+                <!-- notes -->
+                <div class="col-12">
+                    <label for="notes" class="form-label">Notes</label>
+                    <textarea class="form-control" id="notes" rows="4"
+                        placeholder="Enter your notes here..."></textarea>
+                </div>
+
+                <!-- Submit and Home Button -->
+                <div class="d-flex justify-content-center mb-2 button-group">
+                    <a href="/audit/audit-detail.html" class="btn btn-primary mx-2">Submit</a>
+                    <a href="/audit/seo-audit-list.html" class="btn btn-primary mx-2">Home</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
