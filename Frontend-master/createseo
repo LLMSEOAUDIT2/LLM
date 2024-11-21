@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Audit</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Create New Audit</h1>
+        <form id="auditForm">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label for="clientName" class="form-label">Client Name</label>
+                    <input type="text" class="form-control" id="clientName" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="websiteUrl" class="form-label">Website URL</label>
+                    <input type="url" class="form-control" id="websiteUrl" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="auditDate" class="form-label">Audit Date</label>
+                    <input type="date" class="form-control" id="auditDate">
+                </div>
+                <div class="col-md-6">
+                    <label for="gtmetrixGrade" class="form-label">GTMetrix Grade</label>
+                    <input type="text" class="form-control" id="gtmetrixGrade">
+                </div>
+                <div class="col-md-6">
+                    <label for="gtmetrixPerformance" class="form-label">GTMetrix Performance</label>
+                    <input type="number" class="form-control" id="gtmetrixPerformance" value="0">
+                </div>
+                <div class="col-md-6">
+                    <label for="gtmetrixStructure" class="form-label">GTMetrix Structure</label>
+                    <input type="number" class="form-control" id="gtmetrixStructure" value="0">
+                </div>
+                <div class="col-md-6">
+                    <label for="pagespeedPerformance" class="form-label">PageSpeed Performance</label>
+                    <input type="number" class="form-control" id="pagespeedPerformance" value="0">
+                </div>
+                <div class="col-md-6">
+                    <label for="pagespeedAccessibility" class="form-label">PageSpeed Accessibility</label>
+                    <input type="number" class="form-control" id="pagespeedAccessibility" value="0">
+                </div>
+                <div class="col-md-6">
+                    <label for="pagespeedbestpractices" class="form-label">PageSpeed Best Practices</label>
+                    <input type="number" class="form-control" id="pagespeedbestpractices" value="0">
+                </div>
+                <div class="col-md-6">
+                    <label for="pageSpeedSEO" class="form-label">PageSpeed SEO</label>
+                    <input type="number" class="form-control" id="pageSpeedSEO" value="0">
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary mx-2">Submit</button>
+                </div>
+            </div>
+        </form>
+        <h3>Recommendation:</h3>
+        <div id="recommendation"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $('#auditForm').on('submit', function(event) {
+            event.preventDefault();
+
+            var formData = {
+                clientName: $('#clientName').val(),
+                websiteUrl: $('#websiteUrl').val(),
+                auditDate: $('#auditDate').val(),
+                gtmetrixGrade: $('#gtmetrixGrade').val(),
+                gtmetrixPerformance: $('#gtmetrixPerformance').val(),
+                gtmetrixStructure: $('#gtmetrixStructure').val(),
+                pagespeedPerformance: $('#pagespeedPerformance').val(),
+                pagespeedAccessibility: $('#pagespeedAccessibility').val(),
+                pagespeedBestPractices: $('#pagespeedbestpractices').val(),
+                pageSpeedSEO: $('#pageSpeedSEO').val(),
+            };
+
+            $.ajax({
+                url: '/api/analyze',
+                method: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(formData),
+                success: function(response) {
+                    $('#recommendation').html(response.recommendation);
+                },
+                error: function(error) {
+                    console.error("Error:", error);
+                    $('#recommendation').html('<div class="text-danger">An error occurred. Please try again.</div>');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
