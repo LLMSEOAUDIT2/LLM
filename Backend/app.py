@@ -5,7 +5,7 @@ from utils import markdown_to_html  # Import the function from utils.py
 app = Flask(__name__)
 
 # Initialize Groq Client
-api_key = "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"
+api_key = ""
 client = Groq(api_key=api_key)
 
 @app.route('/')
